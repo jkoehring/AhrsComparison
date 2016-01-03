@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 import org.usfirst.frc.team1165.robot.subsystems.ImuDigitalComboBoard;
+import org.usfirst.frc.team1165.robot.subsystems.NavX;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -19,6 +20,7 @@ import org.usfirst.frc.team1165.robot.subsystems.ImuDigitalComboBoard;
 public class Robot extends IterativeRobot
 {
 	public static final ImuDigitalComboBoard imu = new ImuDigitalComboBoard(I2C.Port.kOnboard, new DigitalInput(RobotMap.gyroInterruptChannel));
+	public static final NavX navX = new NavX();
 	public static OI oi;
 
 	Command autonomousCommand;
